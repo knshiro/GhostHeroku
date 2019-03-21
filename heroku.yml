@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: server__host='0.0.0.0' server__port=$PORT node current/index.js
