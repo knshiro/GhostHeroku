@@ -1,5 +1,11 @@
+# Resources to provision on app creation
+setup:
+  addons:
+    - plan: cleardb
+      as: CLEARDB_DATABASE
+  config:
+    DB_URL_NAME: CLEARDB_DATABASE_URL
+# Reference the Dockerfiles to build into Docker images
 build:
   docker:
     web: Dockerfile
-run:
-  web: server__host='0.0.0.0' server__port=$PORT node current/index.js
