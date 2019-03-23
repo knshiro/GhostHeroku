@@ -1,7 +1,7 @@
 # Resources to provision on app creation
 setup:
   addons:
-    - plan: cleardb
+    - plan: cleardb:ignite
       as: CLEARDB_DATABASE
   config:
     DB_URL_NAME: CLEARDB_DATABASE_URL
